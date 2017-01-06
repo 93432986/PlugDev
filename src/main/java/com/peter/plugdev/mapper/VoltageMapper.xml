@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.peter.plugdev.mapper.VoltageMapper">
+	<insert id="insertVoltage">
+		insert into voltage_data(imei,voltage,time) values(#{imei},#{voltage},#{time})
+	</insert>
+	
+	<insert id="insertVoltageEntity">
+		insert into voltage_data(imei,voltage,time) values(#{voltage.imei},#{voltage.voltage},#{voltage.time})
+	</insert>
+	</mapper>
